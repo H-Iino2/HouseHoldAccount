@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.householdaccount.mapper.ItemMapper">
+
+
+
+
+	<insert id = "insertItem" >
+		insert into householdaccount (item,price,date) 
+			values(
+				#{item},#{price},#{sqlPayDate}
+			); 
+	</insert>
+	
+	<select id = "selectItem" resultType ="com.householdaccount.Bean.ItemBean">
+		select * from householdaccount where date between #{firstDate} and #{lastDate}  
+	</select>
+	
+	<select id = "mountPrice" resultType = "int">
+		select SUM(price) from householdaccount where date between #{firstDate} and #{lastDate}
+	</select>
+	
+	<select id = "selectClassify" resultType = "com.householdaccount.Bean.ItemBean">
+		select item, SUM(price) as price from householdaccount where date between #{firstDate} and #{lastDate} group by item
+	</select>
+	
+	<delete id = "deleteItem">
+		delete from householdaccount where id = #{id}
+	</delete>
+	
+	<select id = "updateSelectItem" resultType = "com.householdaccount.Bean.ItemBean">
+		select * from householdaccount where id = #{id}
+	</select>
+	
+	
+
+</mapper>

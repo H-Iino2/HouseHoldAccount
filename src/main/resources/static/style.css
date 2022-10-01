@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@media(min-width:600px){
+	*{
+		
+	}
+	header{
+		width:100%;
+		display:flex;
+		align-items: center;
+		background-color:rgb(255, 255, 255);
+	}
+	.nav{
+		margin-left:auto;
+		text-align:right;
+		background-color: rgb(192, 192, 192);
+  		display:table-cell;
+  		vertical-align:middle;
+	}
+	.menu-item{
+		list-style:none;
+		display:inline-block;
+		padding:10px;
+	}
+	
+}
+
+/*
+header{
+	display:flex;
+}
+*/
+
+
+	
