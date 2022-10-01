@@ -12,5 +12,6 @@ function today() {
 }
 //前月の月初と月末を初期値にいれる
 
+//gittest
 
 
