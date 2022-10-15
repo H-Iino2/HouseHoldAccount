@@ -33,6 +33,10 @@
 		select * from householdaccount where id = #{id}
 	</select>
 	
+	<select id = "updateItem">
+		update householdaccount set item = #{item}, price = #{price}, date = #{sqlPayDate} where id = #{id}
+	</select>
+	
 	
 
 </mapper>

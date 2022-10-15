@@ -20,6 +20,10 @@ public class ItemDao {
 	return mapper.insertItem(item,price,sqlPayDate);
 	}
 	
+	//更新処理
+	public void updateItem(int id,String item,int price, Date sqlPayDate) {
+		mapper.updateItem(id,item,price,sqlPayDate);
+	}
 	//表示処理
 	public List<ItemBean> selectItem(LocalDate firstDate,LocalDate lastDate){
 		return mapper.selectItem(firstDate,lastDate);
@@ -32,6 +36,7 @@ public class ItemDao {
 	public List<ItemBean> selectClassify(LocalDate firstDate,LocalDate lastDate){
 		return mapper.selectClassify(firstDate,lastDate);
 	}
+	
 	
 	
 	//削除処理

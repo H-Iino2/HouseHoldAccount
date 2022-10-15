@@ -25,5 +25,10 @@ public interface ItemMapper {
 	void deleteItem(int id);
 	
 	//更新処理
+	void updateItem(int id,String item,int price,Date sqlPayDate);
+	
+	
 	List<ItemBean> updateSelectItem(int id);
+	
+	//git
 }

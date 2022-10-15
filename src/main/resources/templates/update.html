@@ -66,6 +66,7 @@
 			<form action = "/updateItem" method = "post">
 				<tr th:each = "obj:${resultList}">
 					<td><p th:text = "${obj.id}"></p></td>
+					<td><input type = "hidden" th:value = "${obj.id}" name = "id"></td>
 					<td><input type = "text" th:value = "${obj.item}" name = "product"></td>
 					<td><input type = "text" th:value = "${obj.price}" name = "price"></td>
 					<td><input type = "date" th:value = "${obj.date}" name = "date"></td>

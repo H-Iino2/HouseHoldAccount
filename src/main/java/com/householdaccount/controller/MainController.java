@@ -78,11 +78,12 @@ public class MainController {
 	//更新処理
 	@RequestMapping(path ="/updateItem",method = RequestMethod.POST )
 	public String updateItem(Model model,
-			@RequestParam("product") String item,@RequestParam("price") int price, @RequestParam("date") String payDate
+			@RequestParam("id") int id, @RequestParam("product") String item,@RequestParam("price") int price, @RequestParam("date") String payDate
 			) {
 		//日付を型変換
 		Date sqlPayDate = Date.valueOf(payDate);
-		service.insertItem(item,price,sqlPayDate);
+		//service.insertItem(item,price,sqlPayDate);
+		service.updateItem(id,item,price,sqlPayDate);
 		/*
 		LocalDate ld = LocalDate.parse(payDate);
 		System.out.println(ld);

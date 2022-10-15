@@ -66,6 +66,11 @@ public class ItemService {
 		return dao.updateSelectItem(id);
 	}
 	
+	//更新処理
+	public void updateItem(int id,String item,int price, Date sqlPayDate){
+		dao.updateItem(id,item,price,sqlPayDate);
+	}
+	
 	//検索
 	public List<ItemBean> selectSerchItem(LocalDate firstDate ,LocalDate lastDate) {
 		
